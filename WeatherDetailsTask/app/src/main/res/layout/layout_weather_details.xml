@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+<data>
+    <variable name="model" type="com.swetha.locationtask.WeatherDetailsBinding"/>
+</data>
+    <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        <TextView
+                style="@style/NormalTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{model.location}"
+                android:layout_marginTop="16dp" android:id="@+id/location" android:layout_marginLeft="8dp"
+                android:textSize="18sp" android:layout_marginStart="8dp"/>
+        <TextView
+                android:text="@string/current_weather"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="16dp"
+                style="@style/Header"
+                android:layout_marginStart="12dp" android:id="@+id/weatherdetails_header"
+                android:layout_below="@+id/location"/>
+        <TextView
+                style="@style/NormalTextStyle"
+                android:layout_width="wrap_content"
+                android:text="@{model.weatherDetails}"
+                android:layout_marginBottom="16dp"
+                android:layout_below="@id/weatherdetails_header"
+                android:layout_height="wrap_content" android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp" android:id="@+id/weather_details"
+        />
+        <TextView
+                android:text="@string/weather_forecast"
+                style="@style/Header"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/weather_details"
+                android:layout_height="wrap_content" android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp" android:id="@+id/weather_forecast_header"
+        />
+        <TextView
+                android:layout_width="wrap_content"
+                android:text="@{model.weatherForecastDetails}"
+                android:layout_height="wrap_content" android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp" android:id="@+id/weather_forecast"
+                android:layout_below="@+id/weather_forecast_header"
+                style="@style/NormalTextStyle"
+        />
+    </RelativeLayout>
+</layout>

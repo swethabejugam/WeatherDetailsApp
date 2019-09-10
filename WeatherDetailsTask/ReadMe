@@ -1,0 +1,143 @@
+﻿Hi,I am swetha. This application description is mentioned below.
+And I have used data binding, Retrofit, Creation and implementing a library and MVVM code architecture.
+
+This is the weather application which has following screens:
+1.My Locations
+2.Weather Details including forecast
+
+1.My Location
+This screen show list of user added locations.
+Data
+Location: City and Country
+
+Functionality
+User will be able to add location
+By clicking on location user navigate to weather details
+Locations added by user persisted locally
+By clicking back button application will be closed
+
+2.Weather details
+This screen show weather details for selected location at the top and weather forecast at the bottom.
+Data
+Current weather:
+Temperature ("main"."temp": 285.1)
+Location (city and country)
+Date ("dt": 1566283914)
+Weather icon ("weather"."icon": "01d")
+Weather description ("weather"."main": "Clear")
+
+Weather forecast:
+Temperature ("main"."temp": 285.1)
+Time only ("dt": 1566283914)
+Weather icon ("weather"."icon": "01d")
+Weather description ("weather"."main": "Clear")
+
+Functionality
+User will be able to return back to list of locations
+
+
+
+API Information
+Weather Forecast
+https://openweathermap.org/forecast5
+http://api.openweathermap.org/data/2.5/forecast?q=London,gb&appid={api_key}
+{
+    "cod": "200",
+    "message": 0.0122,
+    "cnt": 40,
+    "list": [
+        {
+            "dt": 1566291600,
+            "main": {
+                "temp": 289.16,
+                "temp_min": 289.16,
+                "temp_max": 289.481,
+                "pressure": 1022.24,
+                "sea_level": 1022.24,
+                "grnd_level": 1017.04,
+                "humidity": 62,
+                "temp_kf": -0.32
+            },
+            "weather": [
+                {
+                    "id": 800,
+                    "main": "Clear",
+                    "description": "clear sky",
+                    "icon": "01d"
+                }
+            ],
+            "clouds": {
+                "all": 0
+            },
+            "wind": {
+                "speed": 3.67,
+                "deg": 263.748
+            },
+            "sys": {
+                "pod": "d"
+            },
+            "dt_txt": "2019-08-20 09:00:00"
+        },
+….
+    ],
+    "city": {
+        "id": 2643743,
+        "name": "London",
+        "coord": {
+            "lat": 51.5073,
+            "lon": -0.1277
+        },
+        "country": "GB",
+        "population": 1000000,
+        "timezone": 3600,
+        "sunrise": 1566276809,
+        "sunset": 1566328491
+    }
+}
+
+Current Weather
+https://openweathermap.org/current
+api.openweathermap.org/data/2.5/weather?q=London,uk&appid={api_key}
+{
+    "coord": {
+        "lon": -0.13,
+        "lat": 51.51
+    },
+    "weather": [
+        {
+            "id": 800,
+            "main": "Clear",
+            "description": "clear sky",
+            "icon": "01d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 285.1,
+        "pressure": 1020,
+        "humidity": 87,
+        "temp_min": 283.71,
+        "temp_max": 286.48
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 3.6,
+        "deg": 240
+    },
+    "clouds": {
+        "all": 1
+    },
+    "dt": 1566283914,
+    "sys": {
+        "type": 1,
+        "id": 1400,
+        "message": 0.011,
+        "country": "GB",
+        "sunrise": 1566276809,
+        "sunset": 1566328492
+    },
+    "timezone": 3600,
+    "id": 2643743,
+    "name": "London",
+    "cod": 200
+}

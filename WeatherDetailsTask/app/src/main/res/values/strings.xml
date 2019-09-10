@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">LocationTask</string>
+    <string name="err_city_not_found">City Not Found</string>
+    <string name="weather_reports_header">Weather Reports</string>
+    <string name="get_weather_details_as_per_the_location">Get Weather details as per the location</string>
+    <string name="enter_city_and_country">Enter City and Country</string>
+    <string name="enter_city">Enter City</string>
+    <string name="enter_country">Enter Country</string>
+    <string name="current_weather">Current Weather</string>
+    <string name="weather_forecast">Weather Forecast</string>
+    <string name="add_location">Add Location</string>
+</resources>

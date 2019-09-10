@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable name="handlers" type="com.swetha.locationtask.MainActivity.MyClickHandlers"/>
+    </data>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_margin="20dp"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:text="@string/enter_city_and_country"
+                android:padding="8dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/header"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+                android:padding="8dp"
+                android:hint="@string/enter_city"
+                android:layout_width="match_parent"
+                android:maxLength="18"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:inputType="text"
+                android:layout_height="wrap_content" android:id="@+id/edt_city"/>
+        <androidx.appcompat.widget.AppCompatEditText
+                android:padding="8dp"
+                android:maxLength="18"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:inputType="text"
+                android:hint="@string/enter_country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/edt_country"/>
+        <Button
+                android:text="@string/add_location"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:onClick="@{(view) -> handlers.onSubmitClick()}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/btn_add_loc"/>
+    </LinearLayout>
+</layout>
